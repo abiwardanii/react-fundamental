@@ -16,9 +16,8 @@ const Home = () => {
     }
 
     useEffect(() => {
-        console.log('use effect ran'); // run every time the component is rendered
-        console.log(name);  
-    },[name]);
+        console.log('use effect ran'); // run every time the component is rendered 
+    },[]);
 
   return (
     <div className="home">
