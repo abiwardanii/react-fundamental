@@ -1,19 +1,21 @@
 import { useState } from "react";
 
 const Home = () => {
-  //   let name = "abi";
-  const [name, setName] = useState("abi"); //destructuring
-  const [age, setAge] = useState(20);
-
-  const handleClick = () => {
-      setName('wardani');
-      setAge(30);
-  };
+    const [blogs, setBlogs] = useState([
+        { title: 'Halo', body: 'lorem ipsum...', author: 'abi', id: 1 },
+        { title: 'Hai', body: 'lorem ipsum...', author: 'tom', id: 2 },
+        { title: 'Hola', body: 'lorem ipsum...', author: 'edo', id: 3 }
+    ]);
   return (
     <div className="home">
-      <h2>HomePage</h2>
-      <p>Umur {name} sekarang {age} tahun</p>
-      <button onClick={handleClick}>Click me</button>
+        <div>
+            {blogs.map((blog) => (
+                <div className="blog-preview" key={blog.id}>
+                    <h2>{ blog.title }</h2>
+                    <p>Ditulis oleh {blog.author} </p>
+                </div>
+            ))}
+        </div>
     </div>
   );
 };
