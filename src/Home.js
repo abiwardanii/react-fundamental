@@ -8,6 +8,8 @@ const Home = () => {
         { title: 'Ada apa dengan edo', body: 'lorem ipsum...', author: 'edo', id: 3 }
     ]);
 
+    const [name, setName] = useState('abi');
+
     const handleDelete = (id) => {
         const newBlogs = blogs.filter(blog => blog.id !== id)
         setBlogs(newBlogs);
@@ -15,11 +17,14 @@ const Home = () => {
 
     useEffect(() => {
         console.log('use effect ran'); // run every time the component is rendered
-    });
+        console.log(name);  
+    },[name]);
 
   return (
     <div className="home">
         <BlogList blogs={blogs} title="Judul Buku" handleDelete={handleDelete}/>
+        <button onClick={() => setName('wardani')} >change name</button>
+        <p>{name}</p>
     </div>
   );
 };
