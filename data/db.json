@@ -23,6 +23,18 @@
       "body": "buku dani",
       "author": "dani",
       "id": 4
+    },
+    {
+      "title": "biologi",
+      "body": "ini buku biologi",
+      "author": "abi",
+      "id": 5
+    },
+    {
+      "title": "IT",
+      "body": "ini buku IT",
+      "author": "dani",
+      "id": 6
     }
   ]
 }
