@@ -1,1 +1,1 @@
-# Programmatic Redirects
+# Deleting Blogs
